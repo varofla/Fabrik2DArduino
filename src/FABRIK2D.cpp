@@ -461,8 +461,8 @@ void Fabrik2D::_applyAngularConstraints(Joint const& parent_joint, Joint const& 
         float cos_angle = cos(angle_diff);
         float sin_angle = sin(angle_diff);
 
-        float new_x = nx * cos_angle - nx * sin_angle;
-        float new_y = nx * sin_angle + nx * cos_angle;
+        float new_x = nx * cos_angle - ny * sin_angle;
+        float new_y = nx * sin_angle + ny * cos_angle;
 
         next_joint.x = joint.x + new_x;
         next_joint.y = joint.y + new_y;
